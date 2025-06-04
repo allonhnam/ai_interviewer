@@ -52,17 +52,17 @@ const AuthForm = ({ type }: { type: FormType }) => {
                 //   password
                 // );
 
-                const result = await signUp({
-                    //   uid: userCredential.user.uid,
-                    name: name!,
-                    email,
-                    password,
-                });
+                // const result = await signUp({
+                //     uid: userCredential.user.uid,
+                //     name: name!,
+                //     email,
+                //     password,
+                // });
 
-                if (!result.success) {
-                    toast.error(result.message);
-                    return;
-                }
+                // if (!result.success) {
+                //     toast.error(result.message);
+                //     return;
+                // }
 
                 toast.success("Account created successfully. Please sign in.");
                 router.push("/sign-in");
@@ -126,7 +126,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
                             control={form.control}
                             name="email"
                             label=""
-                            placeholder="Username or E-mail"
+                            placeholder="E-mail"
                             type="email"
                         />
 
