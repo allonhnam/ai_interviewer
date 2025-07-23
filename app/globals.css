@@ -5,13 +5,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-success-100: #49de50;
-  --color-success-200: #42c748;
+  --color-success-100: #3cb371; /* Changed from #49de50 (green to a different green) */
+  --color-success-200: #2e8b57; /* Changed from #42c748 (green to a different green) */
   --color-destructive-100: #f75353;
   --color-destructive-200: #c44141;
 
-  --color-primary-100: #dddfff;
-  --color-primary-200: #cac5fe;
+  --color-primary-100: #ffd8a1; /* Changed from #dddfff (purple-ish to orange) */
+  --color-primary-200: #ffac33; /* Changed from #cac5fe (purple-ish to orange) */
 
   --color-light-100: #d6e0ff;
   --color-light-400: #6870a6;
@@ -217,7 +217,7 @@
     }
 
     .card-interviewer {
-      @apply flex-center flex-col gap-2 p-7 h-[400px] blue-gradient-dark rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full;
+      @apply flex-center flex-col gap-2 p-7 h-[400px] spotify-green-gradient-dark rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full; /* Changed gradient here */
     }
 
     .avatar {
@@ -266,7 +266,7 @@
   }
 
   .card-cta {
-    @apply flex flex-row blue-gradient-dark rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4;
+    @apply flex flex-row spotify-green-gradient-dark rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4; /* Changed gradient here */
   }
 
   .interviews-section {
@@ -306,8 +306,8 @@
   @apply bg-[url('/pattern.png')] bg-top bg-no-repeat;
 }
 
-@utility blue-gradient-dark {
-  @apply bg-gradient-to-b from-[#171532] to-[#08090D];
+@utility spotify-green-gradient-dark { /* New utility for Spotify green gradient */
+  @apply bg-gradient-to-b from-[#1DB954] to-[#191414];
 }
 
 @utility blue-gradient {
