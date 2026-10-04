@@ -101,11 +101,11 @@ const AuthForm = ({ type }: { type: FormType }) => {
         <div className="card-border lg:min-w-[566px]">
             <div className="flex flex-col gap-6 card py-14 px-10">
                 <div className="flex flex-row gap-2 justify-center">
-                    <Image src="/logo.svg" alt="logo" height={32} width={38} />
-                    <h2 className="text-primary-100">AI Interviewer</h2>
+                    <Image src="/brand-mark.svg" alt="Intervue logo" height={40} width={40} priority />
+                    <h2 className="text-xl">Intervue</h2>
                 </div>
 
-                <h3>Take Your AI Mock Interview</h3>
+                <h3>{isSignIn ? "Welcome back" : "Create your practice space"}</h3>
 
                 <Form {...form}>
                     <form
@@ -116,8 +116,8 @@ const AuthForm = ({ type }: { type: FormType }) => {
                             <FormField
                                 control={form.control}
                                 name="name"
-                                label=""
-                                placeholder="Your Name"
+                                label="Full name"
+                                placeholder="Alex Morgan"
                                 type="text"
                             />
                         )}
@@ -125,16 +125,16 @@ const AuthForm = ({ type }: { type: FormType }) => {
                         <FormField
                             control={form.control}
                             name="email"
-                            label=""
-                            placeholder="E-mail"
+                            label="Email address"
+                            placeholder="you@example.com"
                             type="email"
                         />
 
                         <FormField
                             control={form.control}
                             name="password"
-                            label=""
-                            placeholder="Password"
+                            label="Password"
+                            placeholder="Enter your password"
                             type="password"
                         />
 

@@ -26,7 +26,7 @@ const Feedback = async ({ params }: RouteParams) => {
     <section className="section-feedback">
       <div className="flex flex-row justify-center">
         <h1 className="text-4xl font-semibold">
-          Feedback on the Interview -{" "}
+          Interview feedback ·{" "}
           <span className="capitalize">{interview.role}</span> Interview
         </h1>
       </div>
@@ -63,7 +63,7 @@ const Feedback = async ({ params }: RouteParams) => {
 
       {/* Interview Breakdown */}
       <div className="flex flex-col gap-4">
-        <h2>Breakdown of the Interview:</h2>
+        <h2>Performance breakdown</h2>
         {feedback?.categoryScores?.map((category, index) => (
           <div key={index}>
             <p className="font-bold">

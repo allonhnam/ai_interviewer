@@ -25,27 +25,26 @@ async function Home() {
     <>
       <section className="card-cta">
         <div className="flex flex-col gap-6 max-w-lg">
-          <h2>Get Interview-Ready with AI-Powered Practice & Feedback</h2>
-          <p className="text-lg">
-            Practice real interview questions & get instant feedback
-          </p>
+          <div className="w-fit rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-800">AI-powered practice</div>
+          <h2>Build confidence before the conversation.</h2>
+          <p className="text-lg">Practice realistic interview questions and turn every answer into clear, actionable feedback.</p>
 
           <Button asChild className="btn-primary max-sm:w-full">
-            <Link href="/interview">Create Your Interview</Link>
+            <Link href="/interview">Start a practice interview</Link>
           </Button>
         </div>
 
         <Image
           src="/robot.png"
-          alt="robo-dude"
+          alt="AI interview assistant"
           width={400}
           height={400}
           className="max-sm:hidden"
         />
       </section>
 
-      <section className="flex flex-col gap-6 mt-8">
-        <h2>Your Interviews</h2>
+      <section className="flex flex-col gap-6 mt-12">
+        <div><p className="mb-1 text-sm font-semibold uppercase tracking-[0.12em] text-sky-800">Your progress</p><h2>Recent interviews</h2></div>
 
         <div className="interviews-section">
           {hasPastInterviews ? (
@@ -61,13 +60,13 @@ async function Home() {
               />
             ))
           ) : (
-            <p>You haven&apos;t taken any interviews yet</p>
+            <p>You haven&apos;t completed an interview yet. Start one above when you&apos;re ready.</p>
           )}
         </div>
       </section>
 
-      <section className="flex flex-col gap-6 mt-8">
-        <h2>Take Interviews</h2>
+      <section className="flex flex-col gap-6 mt-12">
+        <div><p className="mb-1 text-sm font-semibold uppercase tracking-[0.12em] text-teal-700">Explore</p><h2>Practice library</h2></div>
 
         <div className="interviews-section">
           {hasUpcomingInterviews ? (
